@@ -7,6 +7,7 @@ package manejoarray;
 
 // import java.util.ArrayList;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -17,8 +18,7 @@ public class ArrayList01 {
     public static void main(String[] args) {
 
         // creación de un ArrayList
-        ArrayList<Integer> arreglo = new ArrayList<>();
-
+        /*ArrayList<Integer> arreglo = new ArrayList<>();
         arreglo.add(10);
         arreglo.add(20);
         arreglo.add(30);
@@ -46,11 +46,23 @@ public class ArrayList01 {
             System.out.println(arreglo3.get(i));
         }
 
-        System.out.println("----------------------------------");
+        System.out.println("----------------------------------");*/
         ArrayList<String> arreglo2 = new ArrayList<>();
-
-        
-        
+        Scanner entrada = new Scanner(System.in);
+        boolean bandera = true;
+        while (bandera) {
+            System.out.println("Ingrese el nombre del pais");
+            String pais = entrada.nextLine();
+            arreglo2.add(pais);
+            System.out.println("Si desea salir del ciclo oprima (s)");
+            String opcion = entrada.nextLine();
+            if (opcion.equals("s")) {
+                bandera = false;
+            }
+            for (int i = 0; i < arreglo2.size(); i++) {
+                System.out.printf("Los paises son: \n%s\n", arreglo2.get(i));
+            }
+        }
         /*
         ArrayList <String> arreglo2 = new ArrayList<>();
         
